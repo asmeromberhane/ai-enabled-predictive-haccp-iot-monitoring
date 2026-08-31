@@ -21,3 +21,8 @@ __pycache__/
 # macOS & system files
 .DS_Store
 *.swp
+
+# Excluded documents
+Proposal.pdf
+Asmerom Berhane ToR.pdf
+
