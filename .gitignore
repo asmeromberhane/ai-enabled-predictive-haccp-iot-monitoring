@@ -1,0 +1,38 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Virtual environments
+venv/
+venv_tf/
+env/
+.env/
+asme/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# macOS
+.DS_Store
+*.swp
+
+# IDE & Workspace
+.vscode/
+.idea/
+*.code-workspace
+Asme Final Year Project.code-workspace
+
+# Excluded project documents & reports
+Proposal.pdf
+Asmerom Berhane ToR.pdf
+predictive_haccp_implementation_plan.md
+predictive_haccp_eda_report.md
+
+# Large data & models
+Dataset/
+eda_outputs/
+session_figures/

@@ -1,0 +1,9 @@
+# Core dependency required to run predictive_haccp_eda.py
+pandas>=2.0.0
+
+# Recommended core dependencies for subsequent Predictive HACCP project phases
+# numpy>=1.24.0
+# scikit-learn>=1.3.0
+# matplotlib>=3.7.0
+# seaborn>=0.12.0
+# shap>=0.42.0
