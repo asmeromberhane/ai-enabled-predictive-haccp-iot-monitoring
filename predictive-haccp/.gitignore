@@ -4,8 +4,6 @@ venv_tf/
 env/
 .env/
 asme/
-**/asme/
-**/venv_tf/
 
 # Python cache
 __pycache__/

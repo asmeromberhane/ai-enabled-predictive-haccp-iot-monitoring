@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="650" viewBox="0 0 680 650" role="img">
+<rect width="100%" height="100%" fill="white"/>
+<text x="340.0" y="28" font-family="Arial, sans-serif" font-size="16" font-weight="500" text-anchor="middle" fill="#222">UCI Occupancy Numeric Correlation</text>
+<text x="122" y="113.94666666666666" font-family="Arial, sans-serif" font-size="10" font-weight="400" text-anchor="end" fill="#222">Temperature</text>
+<rect x="130.0" y="66.0" width="77.3" height="77.3" fill="rgb(115,135,245)" stroke="#ddd"/>
+<text x="168.66666666666666" y="110.85333333333332" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">1.00</text>
+<rect x="207.3" y="66.0" width="77.3" height="77.3" fill="rgb(245,224,224)" stroke="#ddd"/>
+<text x="245.99999999999997" y="110.85333333333332" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">-0.16</text>
+<rect x="284.7" y="66.0" width="77.3" height="77.3" fill="rgb(155,175,245)" stroke="#ddd"/>
+<text x="323.3333333333333" y="110.85333333333332" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">0.69</text>
+<rect x="362.0" y="66.0" width="77.3" height="77.3" fill="rgb(186,206,245)" stroke="#ddd"/>
+<text x="400.6666666666667" y="110.85333333333332" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">0.45</text>
+<rect x="439.3" y="66.0" width="77.3" height="77.3" fill="rgb(218,238,245)" stroke="#ddd"/>
+<text x="478.0" y="110.85333333333332" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">0.21</text>
+<rect x="516.7" y="66.0" width="77.3" height="77.3" fill="rgb(172,192,245)" stroke="#ddd"/>
+<text x="555.3333333333333" y="110.85333333333332" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">0.56</text>
+<text x="122" y="191.27999999999997" font-family="Arial, sans-serif" font-size="10" font-weight="400" text-anchor="end" fill="#222">Humidity</text>
+<rect x="130.0" y="143.3" width="77.3" height="77.3" fill="rgb(245,224,224)" stroke="#ddd"/>
+<text x="168.66666666666666" y="188.18666666666664" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">-0.16</text>
+<rect x="207.3" y="143.3" width="77.3" height="77.3" fill="rgb(115,135,245)" stroke="#ddd"/>
+<text x="245.99999999999997" y="188.18666666666664" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">1.00</text>
+<rect x="284.7" y="143.3" width="77.3" height="77.3" fill="rgb(245,241,241)" stroke="#ddd"/>
+<text x="323.3333333333333" y="188.18666666666664" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">-0.03</text>
+<rect x="362.0" y="143.3" width="77.3" height="77.3" fill="rgb(206,226,245)" stroke="#ddd"/>
+<text x="400.6666666666667" y="188.18666666666664" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">0.30</text>
+<rect x="439.3" y="143.3" width="77.3" height="77.3" fill="rgb(123,143,245)" stroke="#ddd"/>
+<text x="478.0" y="188.18666666666664" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">0.93</text>
+<rect x="516.7" y="143.3" width="77.3" height="77.3" fill="rgb(238,255,245)" stroke="#ddd"/>
+<text x="555.3333333333333" y="188.18666666666664" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">0.05</text>
+<text x="122" y="268.61333333333334" font-family="Arial, sans-serif" font-size="10" font-weight="400" text-anchor="end" fill="#222">Light</text>
+<rect x="130.0" y="220.7" width="77.3" height="77.3" fill="rgb(155,175,245)" stroke="#ddd"/>
+<text x="168.66666666666666" y="265.52" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">0.69</text>
+<rect x="207.3" y="220.7" width="77.3" height="77.3" fill="rgb(245,241,241)" stroke="#ddd"/>
+<text x="245.99999999999997" y="265.52" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">-0.03</text>
+<rect x="284.7" y="220.7" width="77.3" height="77.3" fill="rgb(115,135,245)" stroke="#ddd"/>
+<text x="323.3333333333333" y="265.52" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">1.00</text>
+<rect x="362.0" y="220.7" width="77.3" height="77.3" fill="rgb(186,206,245)" stroke="#ddd"/>
+<text x="400.6666666666667" y="265.52" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">0.45</text>
+<rect x="439.3" y="220.7" width="77.3" height="77.3" fill="rgb(215,235,245)" stroke="#ddd"/>
+<text x="478.0" y="265.52" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">0.22</text>
+<rect x="516.7" y="220.7" width="77.3" height="77.3" fill="rgb(126,146,245)" stroke="#ddd"/>
+<text x="555.3333333333333" y="265.52" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">0.91</text>
+<text x="122" y="345.94666666666666" font-family="Arial, sans-serif" font-size="10" font-weight="400" text-anchor="end" fill="#222">CO2</text>
+<rect x="130.0" y="298.0" width="77.3" height="77.3" fill="rgb(186,206,245)" stroke="#ddd"/>
+<text x="168.66666666666666" y="342.85333333333335" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">0.45</text>
+<rect x="207.3" y="298.0" width="77.3" height="77.3" fill="rgb(206,226,245)" stroke="#ddd"/>
+<text x="245.99999999999997" y="342.85333333333335" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">0.30</text>
+<rect x="284.7" y="298.0" width="77.3" height="77.3" fill="rgb(186,206,245)" stroke="#ddd"/>
+<text x="323.3333333333333" y="342.85333333333335" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">0.45</text>
+<rect x="362.0" y="298.0" width="77.3" height="77.3" fill="rgb(115,135,245)" stroke="#ddd"/>
+<text x="400.6666666666667" y="342.85333333333335" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">1.00</text>
+<rect x="439.3" y="298.0" width="77.3" height="77.3" fill="rgb(182,202,245)" stroke="#ddd"/>
+<text x="478.0" y="342.85333333333335" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">0.48</text>
+<rect x="516.7" y="298.0" width="77.3" height="77.3" fill="rgb(179,199,245)" stroke="#ddd"/>
+<text x="555.3333333333333" y="342.85333333333335" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">0.50</text>
+<text x="122" y="423.28" font-family="Arial, sans-serif" font-size="10" font-weight="400" text-anchor="end" fill="#222">HumidityRatio</text>
+<rect x="130.0" y="375.3" width="77.3" height="77.3" fill="rgb(218,238,245)" stroke="#ddd"/>
+<text x="168.66666666666666" y="420.1866666666666" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">0.21</text>
+<rect x="207.3" y="375.3" width="77.3" height="77.3" fill="rgb(123,143,245)" stroke="#ddd"/>
+<text x="245.99999999999997" y="420.1866666666666" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">0.93</text>
+<rect x="284.7" y="375.3" width="77.3" height="77.3" fill="rgb(215,235,245)" stroke="#ddd"/>
+<text x="323.3333333333333" y="420.1866666666666" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">0.22</text>
+<rect x="362.0" y="375.3" width="77.3" height="77.3" fill="rgb(182,202,245)" stroke="#ddd"/>
+<text x="400.6666666666667" y="420.1866666666666" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">0.48</text>
+<rect x="439.3" y="375.3" width="77.3" height="77.3" fill="rgb(115,135,245)" stroke="#ddd"/>
+<text x="478.0" y="420.1866666666666" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">1.00</text>
+<rect x="516.7" y="375.3" width="77.3" height="77.3" fill="rgb(211,231,245)" stroke="#ddd"/>
+<text x="555.3333333333333" y="420.1866666666666" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">0.26</text>
+<text x="122" y="500.6133333333333" font-family="Arial, sans-serif" font-size="10" font-weight="400" text-anchor="end" fill="#222">Occupancy</text>
+<rect x="130.0" y="452.7" width="77.3" height="77.3" fill="rgb(172,192,245)" stroke="#ddd"/>
+<text x="168.66666666666666" y="497.52" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">0.56</text>
+<rect x="207.3" y="452.7" width="77.3" height="77.3" fill="rgb(238,255,245)" stroke="#ddd"/>
+<text x="245.99999999999997" y="497.52" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">0.05</text>
+<rect x="284.7" y="452.7" width="77.3" height="77.3" fill="rgb(126,146,245)" stroke="#ddd"/>
+<text x="323.3333333333333" y="497.52" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">0.91</text>
+<rect x="362.0" y="452.7" width="77.3" height="77.3" fill="rgb(179,199,245)" stroke="#ddd"/>
+<text x="400.6666666666667" y="497.52" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">0.50</text>
+<rect x="439.3" y="452.7" width="77.3" height="77.3" fill="rgb(211,231,245)" stroke="#ddd"/>
+<text x="478.0" y="497.52" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">0.26</text>
+<rect x="516.7" y="452.7" width="77.3" height="77.3" fill="rgb(115,135,245)" stroke="#ddd"/>
+<text x="555.3333333333333" y="497.52" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">1.00</text>
+<text x="168.7" y="542.0" font-family="Arial, sans-serif" font-size="10" text-anchor="end" fill="#222" transform="rotate(-38 168.7 542.0)">Temperature</text>
+<text x="246.0" y="542.0" font-family="Arial, sans-serif" font-size="10" text-anchor="end" fill="#222" transform="rotate(-38 246.0 542.0)">Humidity</text>
+<text x="323.3" y="542.0" font-family="Arial, sans-serif" font-size="10" text-anchor="end" fill="#222" transform="rotate(-38 323.3 542.0)">Light</text>
+<text x="400.7" y="542.0" font-family="Arial, sans-serif" font-size="10" text-anchor="end" fill="#222" transform="rotate(-38 400.7 542.0)">CO2</text>
+<text x="478.0" y="542.0" font-family="Arial, sans-serif" font-size="10" text-anchor="end" fill="#222" transform="rotate(-38 478.0 542.0)">HumidityRatio</text>
+<text x="555.3" y="542.0" font-family="Arial, sans-serif" font-size="10" text-anchor="end" fill="#222" transform="rotate(-38 555.3 542.0)">Occupancy</text>
+</svg>

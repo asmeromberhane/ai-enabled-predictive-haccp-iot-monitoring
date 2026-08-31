@@ -1,0 +1,39 @@
+{
+  "fridge_a": {
+    "dht_pin": 4,
+    "door_pin": 17,
+    "fridge_id": "fridge_a"
+  },
+  "fridge_b": {
+    "dht_pin": 22,
+    "door_pin": 27,
+    "fridge_id": "fridge_b"
+  },
+  "logging": {
+    "csv_path": "data/pi_readings.csv",
+    "interval_seconds": 60,
+    "rolling_window": 10
+  },
+  "model": {
+    "model_path": "models/pi_reduced_rf.joblib",
+    "scaler_path": "models/pi_reduced_scaler.joblib",
+    "feature_cols": [
+      "temperature",
+      "humidity",
+      "temp_humidity_interaction",
+      "temp_rolling_mean",
+      "temp_rolling_std",
+      "humidity_rolling_mean",
+      "humidity_rolling_std",
+      "temp_delta",
+      "humidity_delta",
+      "door_open_count",
+      "hour_of_day"
+    ],
+    "risk_threshold": 0.5
+  },
+  "azure": {
+    "connection_string": "YOUR_AZURE_IOT_HUB_CONNECTION_STRING_HERE",
+    "enabled": false
+  }
+}

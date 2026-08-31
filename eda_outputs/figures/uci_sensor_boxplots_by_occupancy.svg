@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="650" viewBox="0 0 900 650" role="img">
+<rect width="100%" height="100%" fill="white"/>
+<text x="450.0" y="28" font-family="Arial, sans-serif" font-size="16" font-weight="500" text-anchor="middle" fill="#222">UCI Sensor Ranges by Occupancy</text>
+<text x="225.0" y="62.0" font-family="Arial, sans-serif" font-size="13" font-weight="500" text-anchor="middle" fill="#222">Temperature</text>
+<line x1="65.0" y1="296.0" x2="420.0" y2="296.0" stroke="#aaa"/>
+<line x1="65.0" y1="76.0" x2="65.0" y2="296.0" stroke="#aaa"/>
+<text x="57.0" y="80.0" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="end" fill="#555">24.4</text>
+<text x="57.0" y="296.0" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="end" fill="#555">19.0</text>
+<line x1="153.8" y1="76.0" x2="153.8" y2="275.7" stroke="#333"/>
+<line x1="126.8" y1="76.0" x2="180.8" y2="76.0" stroke="#333"/>
+<line x1="126.8" y1="275.7" x2="180.8" y2="275.7" stroke="#333"/>
+<rect x="126.8" y="160.1" width="54.0" height="34.2" fill="#f58518" opacity="0.75" stroke="#333"/>
+<line x1="126.8" y1="178.4" x2="180.8" y2="178.4" stroke="#111" stroke-width="2"/>
+<text x="153.75" y="314.0" font-family="Arial, sans-serif" font-size="10" font-weight="400" text-anchor="middle" fill="#222">1</text>
+<line x1="331.2" y1="76.7" x2="331.2" y2="296.0" stroke="#333"/>
+<line x1="304.2" y1="76.7" x2="358.2" y2="76.7" stroke="#333"/>
+<line x1="304.2" y1="296.0" x2="358.2" y2="296.0" stroke="#333"/>
+<rect x="304.2" y="219.1" width="54.0" height="36.2" fill="#4c78a8" opacity="0.75" stroke="#333"/>
+<line x1="304.2" y1="235.0" x2="358.2" y2="235.0" stroke="#111" stroke-width="2"/>
+<text x="331.25" y="314.0" font-family="Arial, sans-serif" font-size="10" font-weight="400" text-anchor="middle" fill="#222">0</text>
+<text x="675.0" y="62.0" font-family="Arial, sans-serif" font-size="13" font-weight="500" text-anchor="middle" fill="#222">Humidity</text>
+<line x1="515.0" y1="296.0" x2="870.0" y2="296.0" stroke="#aaa"/>
+<line x1="515.0" y1="76.0" x2="515.0" y2="296.0" stroke="#aaa"/>
+<text x="507.0" y="80.0" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="end" fill="#555">39.5</text>
+<text x="507.0" y="296.0" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="end" fill="#555">16.7</text>
+<line x1="603.8" y1="79.7" x2="603.8" y2="278.1" stroke="#333"/>
+<line x1="576.8" y1="79.7" x2="630.8" y2="79.7" stroke="#333"/>
+<line x1="576.8" y1="278.1" x2="630.8" y2="278.1" stroke="#333"/>
+<rect x="576.8" y="156.5" width="54.0" height="57.8" fill="#f58518" opacity="0.75" stroke="#333"/>
+<line x1="576.8" y1="188.3" x2="630.8" y2="188.3" stroke="#111" stroke-width="2"/>
+<text x="603.75" y="314.0" font-family="Arial, sans-serif" font-size="10" font-weight="400" text-anchor="middle" fill="#222">1</text>
+<line x1="781.2" y1="76.0" x2="781.2" y2="296.0" stroke="#333"/>
+<line x1="754.2" y1="76.0" x2="808.2" y2="76.0" stroke="#333"/>
+<line x1="754.2" y1="296.0" x2="808.2" y2="296.0" stroke="#333"/>
+<rect x="754.2" y="155.4" width="54.0" height="68.1" fill="#4c78a8" opacity="0.75" stroke="#333"/>
+<line x1="754.2" y1="195.4" x2="808.2" y2="195.4" stroke="#111" stroke-width="2"/>
+<text x="781.25" y="314.0" font-family="Arial, sans-serif" font-size="10" font-weight="400" text-anchor="middle" fill="#222">0</text>
+<text x="225.0" y="362.0" font-family="Arial, sans-serif" font-size="13" font-weight="500" text-anchor="middle" fill="#222">Light</text>
+<line x1="65.0" y1="596.0" x2="420.0" y2="596.0" stroke="#aaa"/>
+<line x1="65.0" y1="376.0" x2="65.0" y2="596.0" stroke="#aaa"/>
+<text x="57.0" y="380.0" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="end" fill="#555">1697.2</text>
+<text x="57.0" y="596.0" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="end" fill="#555">0.0</text>
+<line x1="153.8" y1="376.0" x2="153.8" y2="596.0" stroke="#333"/>
+<line x1="126.8" y1="376.0" x2="180.8" y2="376.0" stroke="#333"/>
+<line x1="126.8" y1="596.0" x2="180.8" y2="596.0" stroke="#333"/>
+<rect x="126.8" y="533.6" width="54.0" height="6.3" fill="#f58518" opacity="0.75" stroke="#333"/>
+<line x1="126.8" y1="537.2" x2="180.8" y2="537.2" stroke="#111" stroke-width="2"/>
+<text x="153.75" y="614.0" font-family="Arial, sans-serif" font-size="10" font-weight="400" text-anchor="middle" fill="#222">1</text>
+<line x1="331.2" y1="395.6" x2="331.2" y2="596.0" stroke="#333"/>
+<line x1="304.2" y1="395.6" x2="358.2" y2="395.6" stroke="#333"/>
+<line x1="304.2" y1="596.0" x2="358.2" y2="596.0" stroke="#333"/>
+<rect x="304.2" y="596.0" width="54.0" height="1.0" fill="#4c78a8" opacity="0.75" stroke="#333"/>
+<line x1="304.2" y1="596.0" x2="358.2" y2="596.0" stroke="#111" stroke-width="2"/>
+<text x="331.25" y="614.0" font-family="Arial, sans-serif" font-size="10" font-weight="400" text-anchor="middle" fill="#222">0</text>
+<text x="675.0" y="362.0" font-family="Arial, sans-serif" font-size="13" font-weight="500" text-anchor="middle" fill="#222">CO2</text>
+<line x1="515.0" y1="596.0" x2="870.0" y2="596.0" stroke="#aaa"/>
+<line x1="515.0" y1="376.0" x2="515.0" y2="596.0" stroke="#aaa"/>
+<text x="507.0" y="380.0" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="end" fill="#555">2076.5</text>
+<text x="507.0" y="596.0" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="end" fill="#555">412.8</text>
+<line x1="603.8" y1="382.3" x2="603.8" y2="592.5" stroke="#333"/>
+<line x1="576.8" y1="382.3" x2="630.8" y2="382.3" stroke="#333"/>
+<line x1="576.8" y1="592.5" x2="630.8" y2="592.5" stroke="#333"/>
+<rect x="576.8" y="502.4" width="54.0" height="47.2" fill="#f58518" opacity="0.75" stroke="#333"/>
+<line x1="576.8" y1="527.8" x2="630.8" y2="527.8" stroke="#111" stroke-width="2"/>
+<text x="603.75" y="614.0" font-family="Arial, sans-serif" font-size="10" font-weight="400" text-anchor="middle" fill="#222">1</text>
+<line x1="781.2" y1="376.0" x2="781.2" y2="596.0" stroke="#333"/>
+<line x1="754.2" y1="376.0" x2="808.2" y2="376.0" stroke="#333"/>
+<line x1="754.2" y1="596.0" x2="808.2" y2="596.0" stroke="#333"/>
+<rect x="754.2" y="564.0" width="54.0" height="27.2" fill="#4c78a8" opacity="0.75" stroke="#333"/>
+<line x1="754.2" y1="583.0" x2="808.2" y2="583.0" stroke="#111" stroke-width="2"/>
+<text x="781.25" y="614.0" font-family="Arial, sans-serif" font-size="10" font-weight="400" text-anchor="middle" fill="#222">0</text>
+</svg>

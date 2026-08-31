@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="650" viewBox="0 0 680 650" role="img">
+<rect width="100%" height="100%" fill="white"/>
+<text x="340.0" y="28" font-family="Arial, sans-serif" font-size="16" font-weight="500" text-anchor="middle" fill="#222">Fruit Dataset Numeric Correlation</text>
+<text x="122" y="137.92000000000002" font-family="Arial, sans-serif" font-size="10" font-weight="400" text-anchor="end" fill="#222">Temp</text>
+<rect x="130.0" y="66.0" width="116.0" height="116.0" fill="rgb(115,135,245)" stroke="#ddd"/>
+<text x="188.0" y="133.28" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">1.00</text>
+<rect x="246.0" y="66.0" width="116.0" height="116.0" fill="rgb(245,240,240)" stroke="#ddd"/>
+<text x="304.0" y="133.28" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">-0.03</text>
+<rect x="362.0" y="66.0" width="116.0" height="116.0" fill="rgb(196,216,245)" stroke="#ddd"/>
+<text x="420.0" y="133.28" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">0.37</text>
+<rect x="478.0" y="66.0" width="116.0" height="116.0" fill="rgb(220,240,245)" stroke="#ddd"/>
+<text x="536.0" y="133.28" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">0.19</text>
+<text x="122" y="253.92000000000002" font-family="Arial, sans-serif" font-size="10" font-weight="400" text-anchor="end" fill="#222">Humid (%)</text>
+<rect x="130.0" y="182.0" width="116.0" height="116.0" fill="rgb(245,240,240)" stroke="#ddd"/>
+<text x="188.0" y="249.28" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">-0.03</text>
+<rect x="246.0" y="182.0" width="116.0" height="116.0" fill="rgb(115,135,245)" stroke="#ddd"/>
+<text x="304.0" y="249.28" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">1.00</text>
+<rect x="362.0" y="182.0" width="116.0" height="116.0" fill="rgb(228,248,245)" stroke="#ddd"/>
+<text x="420.0" y="249.28" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">0.12</text>
+<rect x="478.0" y="182.0" width="116.0" height="116.0" fill="rgb(245,218,218)" stroke="#ddd"/>
+<text x="536.0" y="249.28" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">-0.20</text>
+<text x="122" y="369.92" font-family="Arial, sans-serif" font-size="10" font-weight="400" text-anchor="end" fill="#222">Light (Fux)</text>
+<rect x="130.0" y="298.0" width="116.0" height="116.0" fill="rgb(196,216,245)" stroke="#ddd"/>
+<text x="188.0" y="365.28" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">0.37</text>
+<rect x="246.0" y="298.0" width="116.0" height="116.0" fill="rgb(228,248,245)" stroke="#ddd"/>
+<text x="304.0" y="365.28" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">0.12</text>
+<rect x="362.0" y="298.0" width="116.0" height="116.0" fill="rgb(115,135,245)" stroke="#ddd"/>
+<text x="420.0" y="365.28" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">1.00</text>
+<rect x="478.0" y="298.0" width="116.0" height="116.0" fill="rgb(245,232,232)" stroke="#ddd"/>
+<text x="536.0" y="365.28" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">-0.09</text>
+<text x="122" y="485.92" font-family="Arial, sans-serif" font-size="10" font-weight="400" text-anchor="end" fill="#222">CO2 (pmm)</text>
+<rect x="130.0" y="414.0" width="116.0" height="116.0" fill="rgb(220,240,245)" stroke="#ddd"/>
+<text x="188.0" y="481.28" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">0.19</text>
+<rect x="246.0" y="414.0" width="116.0" height="116.0" fill="rgb(245,218,218)" stroke="#ddd"/>
+<text x="304.0" y="481.28" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">-0.20</text>
+<rect x="362.0" y="414.0" width="116.0" height="116.0" fill="rgb(245,232,232)" stroke="#ddd"/>
+<text x="420.0" y="481.28" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">-0.09</text>
+<rect x="478.0" y="414.0" width="116.0" height="116.0" fill="rgb(115,135,245)" stroke="#ddd"/>
+<text x="536.0" y="481.28" font-family="Arial, sans-serif" font-size="9" font-weight="400" text-anchor="middle" fill="#222">1.00</text>
+<text x="188.0" y="542.0" font-family="Arial, sans-serif" font-size="10" text-anchor="end" fill="#222" transform="rotate(-38 188.0 542.0)">Temp</text>
+<text x="304.0" y="542.0" font-family="Arial, sans-serif" font-size="10" text-anchor="end" fill="#222" transform="rotate(-38 304.0 542.0)">Humid (%)</text>
+<text x="420.0" y="542.0" font-family="Arial, sans-serif" font-size="10" text-anchor="end" fill="#222" transform="rotate(-38 420.0 542.0)">Light (Fux)</text>
+<text x="536.0" y="542.0" font-family="Arial, sans-serif" font-size="10" text-anchor="end" fill="#222" transform="rotate(-38 536.0 542.0)">CO2 (pmm)</text>
+</svg>

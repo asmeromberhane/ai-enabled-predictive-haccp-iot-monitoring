@@ -1,0 +1,4 @@
+model,set,recall,precision,f1,pr_auc,roc_auc,accuracy,tp,tn,fp,fn,best_params
+RF-default,val,0.9944,1.0,0.9972,1.0,1.0,0.9975,529,685,0,3,{}
+RF-tuned,val,0.9944,1.0,0.9972,1.0,1.0,0.9975,529,685,0,3,{}
+Random Forest (tuned),test,1.0,0.9981,0.9991,1.0,1.0,0.9992,532,685,1,0,"{'classifier__class_weight': 'balanced', 'classifier__max_depth': None, 'classifier__max_features': 'sqrt', 'classifier__min_samples_leaf': 1, 'classifier__n_estimators': 100}"

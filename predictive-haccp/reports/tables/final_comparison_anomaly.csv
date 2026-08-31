@@ -1,0 +1,2 @@
+model,recall,precision,f1,pr_auc,roc_auc,accuracy
+Isolation Forest (tuned),0.9868,0.614,0.757,0.6849,0.8175,0.7233

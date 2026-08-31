@@ -1,0 +1,3 @@
+model,set,recall,precision,f1,pr_auc,roc_auc,accuracy,tp,tn,fp,fn,note
+Pi-RF,val,0.9549,0.7925,0.8662,0.9204,0.9493,0.871,508,552,133,24,Reduced feature set for Raspberry Pi deployment
+Pi-RF (reduced),test,0.9737,0.8132,0.8862,0.9099,0.9451,0.8908,518,567,119,14,Reduced feature set for Raspberry Pi deployment

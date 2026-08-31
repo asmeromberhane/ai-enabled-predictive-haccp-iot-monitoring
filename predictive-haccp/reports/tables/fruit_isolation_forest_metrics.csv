@@ -1,0 +1,3 @@
+model,set,recall,precision,f1,pr_auc,roc_auc,accuracy,tp,tn,fp,fn,best_params
+IF-tuned,val,0.9774,0.6047,0.7471,0.6904,0.8142,0.7108,520,345,340,12,"{'contamination': 0.48, 'n_estimators': 100, 'max_samples': 'auto', 'max_features': 1.0}"
+Isolation Forest (tuned),test,0.9868,0.614,0.757,0.6849,0.8175,0.7233,525,356,330,7,"{'contamination': 0.48, 'n_estimators': 100, 'max_samples': 'auto', 'max_features': 1.0}"

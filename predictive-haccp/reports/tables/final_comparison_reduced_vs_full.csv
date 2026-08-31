@@ -1,0 +1,3 @@
+model,feature_set,n_features,recall,precision,f1,roc_auc,accuracy
+Full RF (all features),"All (temp, humidity, light, CO2, fruit type, interactions)",9,1.0,0.9981,0.9991,1.0,0.9992
+Pi Reduced RF,Temperature + humidity + interactions + rolling stats,11,0.9737,0.8132,0.8862,0.9451,0.8908
