@@ -12,6 +12,8 @@ An end-to-end **Explainable AI (XAI)** and **IoT Edge computing** framework desi
 
 By capturing continuous microclimatic fluctuations (temperature, humidity, light, CO₂) in storage environments, this system detects spoilage risks before physical degradation occurs, provides transparent decision rationales via SHAP, and performs real-time edge inference on a Raspberry Pi.
 
+> 📄 **Academic Report**: The complete dissertation report is available in the repository: [Final project report.pdf](./Final%20project%20report.pdf).
+
 ---
 
 ## Architecture Overview
@@ -75,6 +77,7 @@ Evaluated on stratified test partitions across food spoilage and temporal microc
 AI_Enabled-Predictive-HACCP-Using-IoT-Based-Environmental-Monitoring/
 │
 ├── README.md                            # Project documentation
+├── Final project report.pdf             # Academic final project report / dissertation
 ├── LICENSE                              # MIT License
 ├── requirements.txt                     # Workstation / Cloud dependencies
 ├── .gitignore                           # Excluded artifacts & virtual environments
