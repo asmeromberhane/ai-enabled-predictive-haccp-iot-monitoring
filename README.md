@@ -74,7 +74,7 @@ Evaluated on stratified test partitions across food spoilage and temporal microc
 ## Project Structure
 
 ```text
-AI_Enabled-Predictive-HACCP-Using-IoT-Based-Environmental-Monitoring/
+ai-enabled-predictive-haccp-iot-monitoring/
 │
 ├── README.md                            # Project documentation
 ├── Final project report.pdf             # Academic final project report / dissertation
@@ -126,8 +126,8 @@ AI_Enabled-Predictive-HACCP-Using-IoT-Based-Environmental-Monitoring/
 Clone the repository and install the training dependencies:
 
 ```bash
-git clone https://github.com/asmeromberhane/AI_Enabled-Predictive-HACCP-Using-IoT-Based-Environmental-Monitoring-.git
-cd AI_Enabled-Predictive-HACCP-Using-IoT-Based-Environmental-Monitoring-
+git clone https://github.com/asmeromberhane/ai-enabled-predictive-haccp-iot-monitoring.git
+cd ai-enabled-predictive-haccp-iot-monitoring
 
 # Create and activate virtual environment
 python3 -m venv venv
