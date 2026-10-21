@@ -78,7 +78,8 @@ def score_row(row: pd.Series, model, scaler=None) -> dict:
     """
     Score one reading row. Returns a dict with risk_score and risk_label.
     """
-    X = row[FEATURE_COLS].values.reshape(1, -1).astype(float)
+    # Keep column names so the scaler receives the same features it was fitted on
+    X = row[FEATURE_COLS].to_frame().T.astype(float)
     if scaler is not None:
         X = scaler.transform(X)
 
@@ -106,6 +107,10 @@ def score_latest_csv(model, scaler):
     if df.empty:
         log.warning("CSV is empty — no readings to score yet.")
         return
+
+    # sensor_reader.py does not log the interaction term, so derive it here
+    if "temp_humidity_interaction" not in df.columns:
+        df["temp_humidity_interaction"] = df["temperature"] * df["humidity"]
 
     for fridge_id, group in df.groupby("fridge_id"):
         latest = group.iloc[-1]
