@@ -8,11 +8,11 @@
 [![Raspberry Pi](https://img.shields.io/badge/Edge%20IoT-Raspberry%20Pi-C51A4A?logo=raspberry-pi&logoColor=white)](https://www.raspberrypi.com/)
 [![Azure IoT Hub](https://img.shields.io/badge/Cloud-Azure%20IoT%20Hub-0078D4?logo=microsoft-azure&logoColor=white)](https://azure.microsoft.com/en-us/products/iot-hub/)
 
-An end-to-end **Explainable AI (XAI)** and **IoT Edge computing** framework designed to transform traditional reactive food safety into proactive, predictive **Hazard Analysis Critical Control Point (HACCP)** monitoring. 
+An end-to-end **Explainable AI (XAI)** and **IoT edge computing** framework that moves food safety monitoring from reactive checks to proactive, predictive **Hazard Analysis Critical Control Point (HACCP)** monitoring.
 
-By capturing continuous microclimatic fluctuations (temperature, humidity, light, CO₂) in storage environments, this system detects spoilage risks before physical degradation occurs, provides transparent decision rationales via SHAP, and performs real-time edge inference on a Raspberry Pi.
+By tracking storage conditions (temperature, humidity, light, CO₂), the system flags conditions associated with spoilage risk, explains its decisions with SHAP, and runs real-time inference on a Raspberry Pi.
 
-> 📄 **Academic Report**: The complete dissertation report is available in the repository: [Final project report.pdf](./Final%20project%20report.pdf).
+📄 **Full write-up:** the complete dissertation is available as [Final project report.pdf](./Final%20project%20report.pdf).
 
 ---
 
@@ -20,27 +20,27 @@ By capturing continuous microclimatic fluctuations (temperature, humidity, light
 
 ```mermaid
 graph LR
-    subgraph IoT Edge Node [Raspberry Pi 4 Prototype]
-        S1[DHT22: Temp & Humidity] --> SR[sensor_reader.py]
-        S2[Light / Door Switch] --> SR
-        SR --> INF[inference.py<br/>Reduced RF Model]
-        INF -->|Telemetry & CCP Alerts| AZ[azure_sender.py]
+    subgraph EDGE ["IoT Edge Node (Raspberry Pi 4 prototype)"]
+        S1["DHT22: temp & humidity"] --> SR["pi/sensor_reader.py"]
+        S2["Door reed switch"] --> SR
+        SR --> INF["pi/inference.py<br/>Reduced RF model"]
+        INF -->|"Telemetry & CCP alerts"| AZ["pi/azure_sender.py"]
     end
 
-    subgraph Cloud / Storage
-        AZ --> IOTHUB[Azure IoT Hub]
-        IOTHUB --> DB[(Cloud Telemetry Store)]
+    subgraph CLOUD ["Cloud"]
+        AZ --> IOTHUB["Azure IoT Hub"]
+        IOTHUB --> DB[("Cloud telemetry store")]
     end
 
-    subgraph Analytics & XAI Pipeline
-        RAW[(Raw Datasets)] --> PP[Data Preprocessing]
-        PP --> FE[Feature Engineering<br/>Temp x Humidity Interaction]
-        FE --> M1[Tuned Random Forest]
-        FE --> M2[Isolation Forest Anomaly Detector]
-        FE --> M3[Temporal LSTM Benchmark]
-        M1 --> SHAP[SHAP Explainability Engine]
-        FE --> DEPL[deployment/train_pi_model.py]
-        DEPL -->|Optimized pi_reduced_rf.joblib| INF
+    subgraph PIPE ["Analytics & XAI pipeline (predictive-haccp/src)"]
+        RAW[("data/raw")] --> PP["src/data: cleaning"]
+        PP --> FE["src/features: feature engineering<br/>temp x humidity interaction"]
+        FE --> M1["Tuned Random Forest"]
+        FE --> M2["Isolation Forest anomaly detector"]
+        FE --> M3["LSTM temporal benchmark"]
+        M1 --> SHAP["src/evaluation: SHAP explainability"]
+        FE --> DEPL["src/deployment/train_pi_model.py"]
+        DEPL -->|"models/pi_reduced_rf.joblib"| INF
     end
 ```
 
@@ -48,113 +48,121 @@ graph LR
 
 ## Key Features
 
-- **Predictive HACCP Compliance**: Replaces periodic manual inspections with continuous, automated environmental risk auditing.
-- **Explainable AI (XAI)**: Uses TreeExplainer and dependence plots to reveal non-linear risk thresholds (e.g., the synergistic effect of temperature and humidity).
-- **Edge Deployment**: Features a quantized 3-input Random Forest (`temperature`, `humidity`, `temp_humidity_interaction`) capable of sub-millisecond local inference on resource-constrained hardware.
-- **Dual Supervised & Anomaly Framework**: Combines high-precision supervised classification (Random Forest) with unsupervised novelty detection (Isolation Forest) for unlabelled environmental anomalies.
-- **Cloud Integration**: Real-time transmission of sensor metrics and critical limit violations to Azure IoT Hub.
+- **Predictive HACCP compliance:** replaces periodic manual checks with continuous, automated environmental risk monitoring.
+- **Explainable AI (XAI):** SHAP TreeExplainer and dependence plots reveal non-linear risk thresholds, such as the combined effect of temperature and humidity.
+- **Edge deployment:** a reduced Random Forest that uses only features a DHT22 sensor and door switch can provide, running locally on a Raspberry Pi.
+- **Supervised and anomaly detection:** high-precision classification (Random Forest) combined with unsupervised anomaly detection (Isolation Forest) for unlabelled data.
+- **Cloud integration:** optional sending of sensor readings and alerts to Azure IoT Hub.
 
 ---
 
 ## Benchmark Results
 
-Evaluated on stratified test partitions across food spoilage and temporal microclimate datasets:
+Test-set results from [`predictive-haccp/reports/tables/final_summary_all_models.csv`](predictive-haccp/reports/tables/final_summary_all_models.csv):
 
 | Model | Task / Dataset | Recall | Precision | F1-Score | ROC-AUC | Target Deployment |
 | :--- | :--- | :---: | :---: | :---: | :---: | :--- |
-| **Random Forest (Tuned)** | Supervised Classification (Fruit Spoilage) | **1.0000** | **0.9981** | **0.9991** | **1.0000** | Central Server / Cloud Analytics |
-| **Isolation Forest (Tuned)** | Anomaly Detection (Fruit Spoilage) | **0.9868** | 0.6140 | 0.7570 | 0.8175 | Unlabelled Cold Chain Storage |
-| **Pi Reduced Random Forest** | Lightweight Classification (3 Features) | **0.9737** | 0.8132 | **0.8862** | **0.9451** | **Raspberry Pi Edge Device** |
-| **LSTM (Seq Len = 30)** | Temporal Drift Benchmark (UCI Occupancy) | **0.9006** | 0.6220 | 0.7358 | **0.9632** | Continuous Time-Series Auditing |
+| **Random Forest (tuned)** | Supervised classification (Fruit Spoilage) | **1.0000** | **0.9981** | **0.9991** | **1.0000** | Central server / cloud analytics |
+| **Isolation Forest (tuned)** | Anomaly detection (Fruit Spoilage) | **0.9868** | 0.6140 | 0.7570 | 0.8175 | Unlabelled cold-chain storage |
+| **Pi Reduced Random Forest** | Lightweight classification (11 Pi-compatible features) | **0.9737** | 0.8132 | **0.8862** | **0.9451** | **Raspberry Pi edge device** |
+| **LSTM (sequence length 30)** | Temporal benchmark (UCI Occupancy) | **0.9006** | 0.6220 | 0.7358 | **0.9632** | Continuous time-series monitoring |
+| Logistic Regression (baseline) | Supervised classification (Fruit Spoilage) | 0.9605 | 0.8617 | 0.9084 | 0.9511 | Comparison baseline |
 
-> **HACCP Metric Priority**: In food safety monitoring, **Recall** is prioritised to prevent False Negatives (undetected spoilage). All production candidate models achieve $>97\%$ recall.
+> **HACCP metric priority:** in food safety, **recall** comes first, because a missed spoilage event (false negative) is the costliest error. All three Fruit Spoilage models reach at least 97% recall.
+
+The Pi model's 11 features are temperature, humidity, their interaction, rolling means and standard deviations, deltas, door-open count and hour of day. Because the fruit dataset has no timestamps, the rolling and time features are approximated during training (see `src/deployment/train_pi_model.py`).
 
 ---
 
 ## Project Structure
 
+All runnable code lives in **`predictive-haccp/`**. Run every command below from inside that folder.
+
 ```text
 ai-enabled-predictive-haccp-iot-monitoring/
+├── README.md                          # This file
+├── LICENSE                            # MIT License
+├── Final project report.pdf           # Dissertation / final project report
+├── requirements.txt                   # Minimal dependencies for the root EDA script
+├── predictive_haccp_eda.py            # Initial exploratory data analysis script
+├── eda_outputs/                       # EDA report and figures
+├── Dataset/                           # Original dataset downloads
 │
-├── README.md                            # Project documentation
-├── Final project report.pdf             # Academic final project report / dissertation
-├── LICENSE                              # MIT License
-├── requirements.txt                     # Workstation / Cloud dependencies
-├── .gitignore                           # Excluded artifacts & virtual environments
-│
-├── data/                                # Unified data directory
-│   ├── raw/                             # Original source datasets
-│   │   ├── fruit_spoilage/
-│   │   └── uci_occupancy/
-│   └── processed/                       # Cleaned and feature-engineered datasets
-│
-├── models/                              # Serialized model binaries
-│   ├── fruit_random_forest.joblib       # Full research benchmark model
-│   ├── fruit_isolation_forest.joblib    # Unsupervised anomaly detector
-│   ├── pi_reduced_rf.joblib             # Edge-optimised model artifact
-│   ├── uci_lstm_best.keras              # Deep learning benchmark
-│   └── uci_lstm_scaler.joblib           # Preprocessing scaler
-│
-├── machine_learning/                    # Modular ML Pipeline
-│   ├── data/                            # Cleaning and validation routines
-│   ├── features/                        # Environmental interaction terms & lag features
-│   ├── models/                          # Training scripts for RF, IF, and LSTM
-│   ├── evaluation/                      # Comparative evaluation and SHAP analysis
-│   └── deployment/                      # Edge model export routines
-│
-├── raspberry_pi/                        # Edge IoT Prototype
-│   ├── requirements.txt                 # Lightweight edge dependencies
-│   ├── config.example.json              # Hardware configuration & IoT connection template
-│   ├── sensor_reader.py                 # DHT22 and GPIO reading routines
-│   ├── inference.py                     # Real-time local HACCP risk classification
-│   └── azure_sender.py                  # Telemetry ingestion to Azure IoT Hub
-│
-├── notebooks/                           # Exploratory data analysis notebooks
-│
-└── reports/                             # Generated research artifacts
-    ├── figures/                         # SHAP plots, confusion matrices, ROC curves
-    ├── tables/                          # Performance comparison matrices
-    └── experiment_logs/                 # Training logs and parameter audits
+└── predictive-haccp/                  # Main project
+    ├── requirements.txt               # Full training dependencies
+    ├── data/
+    │   ├── raw/                       # fruit_spoilage/, uci_occupancy/
+    │   └── processed/                 # Cleaned and feature-engineered datasets
+    ├── src/
+    │   ├── data/                      # load_data.py, clean_fruit.py, clean_occupancy.py
+    │   ├── features/                  # feature_engineering.py
+    │   ├── models/                    # train_baselines.py, train_random_forest.py,
+    │   │                              # train_isolation_forest.py, train_lstm.py
+    │   ├── evaluation/                # shap_analysis.py, comparative_evaluation.py
+    │   └── deployment/                # train_pi_model.py (reduced edge model)
+    ├── pi/                            # Raspberry Pi edge scripts
+    │   ├── config.example.json        # GPIO pins, model path, Azure settings
+    │   ├── sensor_reader.py           # DHT22 + door switch logging (or --simulate)
+    │   ├── inference.py               # Real-time risk scoring
+    │   └── azure_sender.py            # Optional Azure IoT Hub telemetry
+    ├── models/                        # Trained models (.joblib, .keras)
+    └── reports/
+        ├── tables/                    # Metrics and comparison tables
+        ├── figures/                   # Confusion matrices, SHAP plots, learning curves
+        └── experiment_logs/           # Experiment log
 ```
 
 ---
 
 ## Getting Started
 
-### 1. Workstation / Training Setup
-
-Clone the repository and install the training dependencies:
+### 1. Set up the environment
 
 ```bash
 git clone https://github.com/asmeromberhane/ai-enabled-predictive-haccp-iot-monitoring.git
-cd ai-enabled-predictive-haccp-iot-monitoring
+cd ai-enabled-predictive-haccp-iot-monitoring/predictive-haccp
 
-# Create and activate virtual environment
 python3 -m venv venv
-source venv/bin/activate        # On Windows: venv\Scripts\activate
+source venv/bin/activate        # Windows: venv\Scripts\activate
 
-# Install dependencies
 pip install -r requirements.txt
 ```
 
-### 2. Running the ML & Explainability Pipeline
+The raw datasets are already included in `predictive-haccp/data/raw/`, and the trained models in `predictive-haccp/models/`.
 
-Execute the pipeline sequentially from the project root:
+### 2. Run the ML and explainability pipeline
+
+From the `predictive-haccp/` folder, run in this order:
 
 ```bash
-# 1. Feature Engineering
-python3 -m machine_learning.features.feature_engineering
+# 1. Clean the raw data
+python3 -m src.data.clean_fruit
+python3 -m src.data.clean_occupancy
 
-# 2. Train Models
-python3 -m machine_learning.models.train_random_forest
-python3 -m machine_learning.models.train_isolation_forest
-python3 -m machine_learning.models.train_lstm
+# 2. Feature engineering
+python3 -m src.features.feature_engineering
 
-# 3. Model Explainability (Generates SHAP plots)
-python3 -m machine_learning.evaluation.shap_analysis
+# 3. Train models
+python3 -m src.models.train_baselines
+python3 -m src.models.train_random_forest
+python3 -m src.models.train_isolation_forest
+python3 -m src.models.train_lstm              # requires TensorFlow
 
-# 4. Export Edge Model
-python3 -m machine_learning.deployment.train_pi_model
+# 4. Train the reduced Raspberry Pi model
+python3 -m src.deployment.train_pi_model
+
+# 5. Explainability and final comparison
+python3 -m src.evaluation.shap_analysis
+python3 -m src.evaluation.comparative_evaluation
+```
+
+Outputs are written to `models/`, `reports/tables/` and `reports/figures/`. Rerunning the scripts overwrites the included results.
+
+### 3. Try the edge pipeline without hardware
+
+```bash
+python3 pi/inference.py --simulate        # score a simulated reading for each fridge
+python3 pi/sensor_reader.py --simulate    # log simulated sensor readings (Ctrl+C to stop)
 ```
 
 ---
@@ -162,61 +170,80 @@ python3 -m machine_learning.deployment.train_pi_model
 ## Raspberry Pi Edge Deployment
 
 ### Hardware Requirements
-- **Raspberry Pi** (3B+, 4B, or Zero 2 W running Raspberry Pi OS)
-- **DHT22 / AM2302** (Temperature and Relative Humidity Sensor)
-- **Magnetic Door Reed Switch** (Open/Closed storage detection)
-- **4.7kΩ – 10kΩ Pull-up Resistor** (for DHT22 data line)
 
-### Wiring Diagram (Default GPIO)
+- **Raspberry Pi** (3B+, 4B or Zero 2 W running Raspberry Pi OS)
+- **2× DHT22 / AM2302** temperature and humidity sensors (one per fridge)
+- **2× magnetic door reed switches** (open/closed detection)
+- **4.7 kΩ–10 kΩ pull-up resistors** for the DHT22 data lines
 
-| Component | Component Pin | Raspberry Pi Pin (BCM) | Physical Header Pin |
-| :--- | :--- | :--- | :--- |
-| **DHT22** | VCC | 3.3V or 5V | Pin 1 or Pin 2 |
-| **DHT22** | DATA | GPIO 4 | Pin 7 |
-| **DHT22** | GND | Ground | Pin 6 |
-| **Door Switch** | Terminal 1 | GPIO 17 | Pin 11 |
-| **Door Switch** | Terminal 2 | Ground | Pin 9 |
+### Wiring (defaults in `pi/config.example.json`)
 
-### Edge Execution
+| Fridge | Component | Component Pin | Raspberry Pi Pin (BCM) | Physical Header Pin |
+| :--- | :--- | :--- | :--- | :--- |
+| A | DHT22 | VCC | 3.3V | Pin 1 |
+| A | DHT22 | DATA | GPIO 4 | Pin 7 |
+| A | DHT22 | GND | Ground | Pin 6 |
+| A | Door switch | Terminal 1 / 2 | GPIO 17 / Ground | Pin 11 / Pin 9 |
+| B | DHT22 | DATA | GPIO 22 | Pin 15 |
+| B | Door switch | Terminal 1 / 2 | GPIO 27 / Ground | Pin 13 / Pin 14 |
 
-1. Copy the `raspberry_pi/` directory and `models/pi_reduced_rf.joblib` to the Raspberry Pi.
-2. Install edge requirements:
+Fridge B's DHT22 shares 3.3V and Ground with Fridge A. Change the pins in `config.json` if your wiring differs.
+
+### Running on the Pi
+
+1. Copy the whole `predictive-haccp/` folder to the Raspberry Pi. The scripts find `models/pi_reduced_rf.joblib` relative to this folder.
+2. Install the edge dependencies:
    ```bash
-   pip3 install -r raspberry_pi/requirements.txt
+   cd predictive-haccp
+   pip3 install pandas numpy scikit-learn joblib adafruit-circuitpython-dht gpiozero azure-iot-device
    ```
-3. Configure your Azure IoT credentials:
+3. Create your configuration. Add your Azure IoT Hub connection string and set `"enabled": true` if you want cloud telemetry:
    ```bash
-   cp raspberry_pi/config.example.json raspberry_pi/config.json
-   nano raspberry_pi/config.json
+   cp pi/config.example.json pi/config.json
+   nano pi/config.json
    ```
-4. Start the real-time monitoring loop:
+4. Start logging sensor readings:
    ```bash
-   python3 raspberry_pi/inference.py
+   python3 pi/sensor_reader.py
    ```
+5. In a second terminal, start the risk scoring loop:
+   ```bash
+   python3 pi/inference.py --watch
+   ```
+
+Never commit `pi/config.json`, because it contains your Azure connection string.
 
 ---
 
 ## Explainability (XAI) Insights
 
-SHAP analysis identified that the engineered **`temp_humidity_interaction`** is the second most critical indicator of spoilage risk overall, outperforming individual temperature observations. 
+SHAP analysis ranked the engineered **`temp_humidity_interaction`** as the second most important indicator of spoilage risk overall, ahead of temperature on its own (see `reports/tables/shap_interpretation.csv`).
 
-- **Critical Control Point Trigger**: Environmental risk accelerates dramatically once the standardized interaction index exceeds **+0.5**, providing a mathematical basis for setting automated HACCP corrective action triggers.
+- **Critical control point trigger:** risk rises sharply once the standardised interaction value exceeds **+0.5**, which gives a data-driven basis for automated HACCP corrective-action triggers.
+
+![SHAP summary](predictive-haccp/reports/figures/shap/rf_shap_summary.png)
+
+---
+
+## Limitations
+
+- The datasets have no microbiological ground truth (swab tests or contamination counts). The system identifies **environmental conditions associated with spoilage risk**, not confirmed contamination.
+- The Pi model's rolling and time features are approximated from a dataset without timestamps, so real-world Pi performance still needs validating with live sensor data.
+- The LSTM is trained on the UCI Occupancy dataset as a temporal benchmark, not on food-spoilage data.
 
 ---
 
 ## Datasets & Acknowledgements
 
-1. **Fruit Spoilage Environmental Dataset**:
-   - Mendeley Data, DOI: [10.17632/czz68d9fwj.1](https://doi.org/10.17632/czz68d9fwj.1)
-2. **UCI Occupancy Detection Benchmark**:
-   - Candanedo, L.M. & Feldheim, V. (2016). *Energy and Buildings*, 112, 28–39.
+1. **Fruit Spoilage Environmental Dataset:** Mendeley Data, DOI: [10.17632/czz68d9fwj.1](https://doi.org/10.17632/czz68d9fwj.1)
+2. **UCI Occupancy Detection:** Candanedo, L.M. & Feldheim, V. (2016). Accurate occupancy detection of an office room from light, temperature, humidity and CO2 measurements using statistical learning models. *Energy and Buildings*, 112, 28–39.
 
 ---
 
+## Author
+
+**Asmerom Berhane**: [GitHub](https://github.com/asmeromberhane) · [LinkedIn](https://www.linkedin.com/in/<your-profile>)
+
 ## License
 
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
-
-```
-Copyright (c) 2026 Asmerom Berhane
-```
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
